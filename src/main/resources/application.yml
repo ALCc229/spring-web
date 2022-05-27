@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/suanfa?serverTimezone=GMT&useSSL=false&useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true
+    username: root
+    password: PTU0594
+  mvc:
+    static-path-pattern:
+  transaction:
+    rollback-on-commit-failure: true
+  web:
+    resources:
+      static-locations: classpath:/static/
+server:
+  servlet:
+    session:
+      timeout: 7200
+  max-http-header-size: 16384
+mybatis:
+  mapperLocations: classpath:mapper/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.example.demo
+
